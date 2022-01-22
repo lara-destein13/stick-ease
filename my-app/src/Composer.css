@@ -1,7 +1,7 @@
 .Composer {
     display: flex;
     flex-direction: column; 
-    background-color: blue;
+    background-color: black;
     color: white;
     height: 800px;
     width: 280px;
@@ -25,7 +25,17 @@
     border: solid 1px white;
     font-size: 20px;
     padding: 5px;
-    margin-left: 80px;
-
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
+.select {
+    width: 200px;
+    background: none;
+    color: inherit;
+    border: solid 1px white;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+
+}

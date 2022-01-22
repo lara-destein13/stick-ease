@@ -16,10 +16,14 @@ class Composer extends Component {
     return (
       <div className="Composer">
           <header className="header">
-              <h1 className="h1">StickEaze</h1>
+              <h1 className="h1">Stick Ease</h1>
           </header>
           <form>
           <textarea className="textarea"></textarea>
+            <select className="select">
+                <option value="pink">pink</option>
+                <option value="yellow">yellow</option>
+            </select>            
           <button className="button">create note</button>
         </form>
       </div>
