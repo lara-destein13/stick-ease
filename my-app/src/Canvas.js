@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import stickies from './Stickies';
-import Canvas from './Canvas';
-import Composer from './Composer';
-import './App.css';
+import './Canvas.css';
 
-class App extends Component {
+class Canvas extends Component {
   //-----------------------------------------------------------------------------------------------
   // constructor
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
-    this.stickies = stickies.getStickies();
-    console.log(JSON.stringify(this.stickies, null, 4));
   }
 
   //-----------------------------------------------------------------------------------------------
@@ -19,12 +14,9 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   render() {
     return (
-      <div className="App">
-        <Composer/>
-        <Canvas/>
-      </div>
+      <div className="Canvas">Canvas</div>
     );
   };
 }
 
-export default App;
+export default Canvas;
