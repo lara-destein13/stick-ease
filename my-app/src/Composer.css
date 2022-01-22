@@ -1,5 +1,20 @@
 .Composer {
     display: flex;
     flex-direction: column; 
+    background-color: blue;
+    color: white;
+    height: 800px;
+    width: 320px;
 }
   
+.textarea {
+    resize: none;
+    width: 250px; 
+    height: 250px;   
+}
+
+.button {
+    background: none;
+    color: inherit;
+}
+
