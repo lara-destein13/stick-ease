@@ -1,4 +1,5 @@
 .Composer {
-
+    display: flex;
+    flex-direction: column; 
 }
   
