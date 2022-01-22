@@ -15,8 +15,8 @@ class Composer extends Component {
   render() {
     return (
       <div className="Composer">
-          <header>
-              <h1>StickEaze</h1>
+          <header className="header">
+              <h1 className="h1">StickEaze</h1>
           </header>
           <form>
           <textarea className="textarea"></textarea>
