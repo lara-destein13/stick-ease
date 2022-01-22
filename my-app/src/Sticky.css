@@ -1,0 +1,4 @@
+.Sticky {
+    display: flex;
+    flex-direction: column;
+}
