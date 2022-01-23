@@ -24,9 +24,10 @@ class Canvas extends Component {
   // render
   //-----------------------------------------------------------------------------------------------
   render() {
+    const allStickies = stickies.getStickies();
     return (
       <div className="Canvas">
-          {stickies.getStickies().map((m) => this.renderSticky(m))}
+          {allStickies.map((m) => this.renderSticky(m))}
       </div>
     );
   };
