@@ -16,7 +16,7 @@
     resize: none;
     width: 250px; 
     height: 250px; 
-    margin: 10px;  
+    margin-left: 12px;  
 }
 
 .button {
@@ -25,6 +25,7 @@
     color: inherit;
     border: solid 1px white;
     width: 250px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 12px;
     padding: 10px;
 }
