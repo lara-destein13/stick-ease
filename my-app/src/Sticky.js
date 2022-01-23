@@ -25,8 +25,10 @@ class Sticky extends Component {
     };
 
     return (
-        <Rnd default={def}>
+        <Rnd default={def}>            
+            <div className="stick">
             {sticky.text},
+            </div>
         </Rnd>
     );
   }
