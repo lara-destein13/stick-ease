@@ -21,21 +21,10 @@
 
 .button {
     background: none;
+    font-size: 20px;
     color: inherit;
     border: solid 1px white;
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.select {
-    width: 200px;
-    background: none;
-    color: inherit;
-    border: solid 1px white;
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 10px;
-
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
 }
