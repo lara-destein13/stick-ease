@@ -9,7 +9,7 @@ class Stickies {
             backgroundColor: 'pink',
             height: 300,
             width: 300,
-            text: 'Reach for the stars...',
+            text: 'You got this!',
             x: 50,
             y: 50,
         });
@@ -18,7 +18,7 @@ class Stickies {
             backgroundColor: 'yellow',
             height: 300,
             width: 300,
-            text: 'You got this....',
+            text: 'Effort is more important than perfection',
             x: 60,
             y: 60,
         });
@@ -27,7 +27,7 @@ class Stickies {
             backgroundColor: 'lightblue',
             height: 300,
             width: 300,
-            text: 'Dream Big!',
+            text: 'Just keep coding :)',
             x: 70,
             y: 70,
         });
