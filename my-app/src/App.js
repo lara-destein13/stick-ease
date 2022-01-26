@@ -10,18 +10,52 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
-    this.stickies = stickies.getStickies();
-    console.log(JSON.stringify(this.stickies, null, 4));
+
+    const stickies = [];
+    
+    stickies.push({
+        backgroundColor: 'pink',
+        height: 300,
+        width: 300,
+        text: 'You got this!',
+        x: 50,
+        y: 50,
+    });
+
+    stickies.push({
+        backgroundColor: 'yellow',
+        height: 300,
+        width: 300,
+        text: 'Effort is more important than perfection',
+        x: 60,
+        y: 60,
+    });
+
+    stickies.push({
+        backgroundColor: 'lightblue',
+        height: 300,
+        width: 300,
+        text: 'Just keep coding :)',
+        x: 70,
+        y: 70,
+    });
+
+    this.state = {
+      stickies,
+    };
   }
 
   //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
   render() {
+    const state = this.state;
+    const stickies = state.stickies;
+
     return (
       <div className="App">
         <Composer/>
-        <Canvas/>
+        <Canvas stickies={stickies}/>
       </div>
     );
   };

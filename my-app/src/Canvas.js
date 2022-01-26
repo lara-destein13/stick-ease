@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Sticky from './Sticky';
-import stickies from './Stickies';
 import './Canvas.css';
 
 class Canvas extends Component {
@@ -24,10 +23,11 @@ class Canvas extends Component {
   // render
   //-----------------------------------------------------------------------------------------------
   render() {
-    const allStickies = stickies.getStickies();
+    const props = this.props;
+    const stickies = props.stickies;
     return (
       <div className="Canvas">
-          {allStickies.map((m) => this.renderSticky(m))}
+          {stickies.map((m) => this.renderSticky(m))}
       </div>
     );
   };
