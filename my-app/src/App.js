@@ -46,6 +46,14 @@ class App extends Component {
   }
 
   //-----------------------------------------------------------------------------------------------
+  // composer callBack
+  //-----------------------------------------------------------------------------------------------
+  composerCallBack() {
+    console.log("composerCallBack");
+  }
+
+
+  //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
   render() {
@@ -54,7 +62,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Composer/>
+        <Composer appCallBack={this.composerCallBack}/>
         <Canvas stickies={stickies}/>
       </div>
     );
