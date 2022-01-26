@@ -28,17 +28,18 @@ class Composer extends Component {
       y: 70,
     };
 
+    const textarea = document.getElementById("textarea");
+    textarea.value = "";
 
     console.log("button clicked");
     createStickyCallBack(newSticky);
   }
 
-
   //-----------------------------------------------------------------------------------------------
   // textAreaChanged
   //--------------------------------------------------------------------------------------------
   textAreaChanged(event) {
-    this.text = event.target.value
+    this.text = event.target.value;
     console.log(this.text);
   }
 
@@ -52,7 +53,7 @@ class Composer extends Component {
           <header className="header">
               <h1 className="h1">Stick Ease</h1>
           </header>
-          <textarea className="textarea" onChange={this.textAreaChanged}></textarea>
+          <textarea className="textarea" id="textarea" onChange={this.textAreaChanged}></textarea>
           <button className="button" onClick={this.buttonClicked}>create note</button>
       </div>
 
