@@ -9,6 +9,7 @@ class Composer extends Component {
   constructor(props) {
     super(props);
     autoBind(this);
+    this.text = "";
   }
 
   //-----------------------------------------------------------------------------------------------
@@ -21,32 +22,37 @@ class Composer extends Component {
       backgroundColor: 'lightblue',
       height: 300,
       width: 300,
-      text: 'Just keep coding :)',
+      text: this.text,
       x: 70,
       y: 70,
     };
+
+
     console.log("button clicked");
     appCallBack(newSticky);
   }
 
 
   //-----------------------------------------------------------------------------------------------
+  // textAreaChanged
+  //--------------------------------------------------------------------------------------------
+  textAreaChanged(event) {
+    this.text = event.target.value
+    console.log(this.text);
+  }
+
+  //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
   render() {
-
 
   return (
       <div className="Composer">
           <header className="header">
               <h1 className="h1">Stick Ease</h1>
           </header>
-          <p>foo</p>
-          <button onClick={this.buttonClicked}>click this</button>
-          <form>
-            <textarea className="textarea"></textarea>   
-            <button className="button" onClick={this.buttonClicked}>create note</button>   
-        </form>
+          <textarea className="textarea" onChange={this.textAreaChanged}></textarea>
+          <button className="button" onClick={this.buttonClicked}>create note</button>
       </div>
 
     );

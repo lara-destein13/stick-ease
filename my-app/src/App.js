@@ -4,6 +4,7 @@ import Canvas from './Canvas';
 import Composer from './Composer';
 import autoBind from 'auto-bind';
 import './App.css';
+import Sticky from './Sticky';
 
 class App extends Component {
   //-----------------------------------------------------------------------------------------------
@@ -12,35 +13,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     autoBind(this);
+    this.x = 50;
+    this.y = 50;
 
-    const stickies = [];
-    
-    stickies.push({
-        backgroundColor: 'pink',
-        height: 300,
-        width: 300,
-        text: 'You got this!',
-        x: 50,
-        y: 50,
-    });
 
-    stickies.push({
-        backgroundColor: 'yellow',
-        height: 300,
-        width: 300,
-        text: 'Effort is more important than perfection',
-        x: 60,
-        y: 60,
-    });
+    let stickies = localStorage.getItem('stickies')
+    if (stickies) {
+      stickies = JSON.parse(stickies); 
+    } else {
+      stickies = [];
+    }
 
-    stickies.push({
-        backgroundColor: 'lightblue',
-        height: 300,
-        width: 300,
-        text: 'Just keep coding :)',
-        x: 70,
-        y: 70,
-    });
 
     this.state = {
       stickies,
@@ -51,6 +34,16 @@ class App extends Component {
   //  appCallBack
   //-----------------------------------------------------------------------------------------------
   appCallBack(newSticky) {
+    newSticky.x = this.x;
+    this.x += 50;
+    if (this.x > 300) {
+      this.x = 50;
+    }
+    newSticky.y = this.y;
+    this.y += 50;
+    if (this.y > 300) {
+      this.y = 50;
+    }
     console.log("composerCallBack");
     const state = this.state;
     // const stickies = JSON.parse(JSON.stringify(state.stickies));
