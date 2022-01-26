@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lara-destein13/stick-ease.git/static/css/main.c6758060.css",
+    "main.js": "/lara-destein13/stick-ease.git/static/js/main.be46f588.js",
+    "static/js/787.28cb0dcd.chunk.js": "/lara-destein13/stick-ease.git/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/lara-destein13/stick-ease.git/index.html",
+    "main.c6758060.css.map": "/lara-destein13/stick-ease.git/static/css/main.c6758060.css.map",
+    "main.be46f588.js.map": "/lara-destein13/stick-ease.git/static/js/main.be46f588.js.map",
+    "787.28cb0dcd.chunk.js.map": "/lara-destein13/stick-ease.git/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6758060.css",
+    "static/js/main.be46f588.js"
+  ]
+}
