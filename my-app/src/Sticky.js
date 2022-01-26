@@ -11,6 +11,26 @@ class Sticky extends Component {
   }
 
   //-----------------------------------------------------------------------------------------------
+  // onDragStop
+  //-----------------------------------------------------------------------------------------------
+  onDragStop(x,y) {
+    console.log("onDragStop");
+    console.log(x);
+    console.log(y);
+  }
+  //-----------------------------------------------------------------------------------------------
+  // onResizeStop
+  //-----------------------------------------------------------------------------------------------
+  onResizeStop(e, direction, ref, delta, position) {
+    console.log("onResizeStop");
+    const width = ref.style.width;
+    const height = ref.style.height;
+    console.log(width);
+    console.log(height);
+  }
+
+
+  //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
   render() {
@@ -25,7 +45,10 @@ class Sticky extends Component {
     };
 
     return (
-        <Rnd default={def}>            
+        <Rnd default={def}      
+        onDragStop={this.onDragStop}
+        onResizeStop={this.onResizeStop}       
+        >            
             <div className="stick">
             {sticky.text},
             </div>

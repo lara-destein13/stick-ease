@@ -67,6 +67,16 @@ class App extends Component {
     });
   }
 
+  //-----------------------------------------------------------------------------------------------
+  //  modifyStickyCallBack
+  //-----------------------------------------------------------------------------------------------
+  modifyStickyCallBack() {
+    console.log("hello");
+    const state = this.state;
+    const stickies = state.stickies;
+    localStorage.setItem("stickies", JSON.stringify(stickies));
+    this.forceUpdate()
+  }
 
   //-----------------------------------------------------------------------------------------------
   // render
@@ -78,7 +88,7 @@ class App extends Component {
     return (
       <div className="App">
         <Composer createStickyCallBack={this.createStickyCallBack}/>
-        <Canvas stickies={stickies}/>
+        <Canvas stickies={stickies} modifyStickyCallBack={this.modifyStickyCallBack}/>
       </div>
     );
   };
