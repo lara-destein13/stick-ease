@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import autoBind from 'auto-bind';
 import './Composer.css';
 
 class Composer extends Component {
@@ -7,20 +8,15 @@ class Composer extends Component {
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
+    autoBind(this);
   }
 
   //-----------------------------------------------------------------------------------------------
   // button clicked
   //-----------------------------------------------------------------------------------------------
   buttonClicked() {
-    console.log("button clicked");
-  }
-
-
-  //-----------------------------------------------------------------------------------------------
-  // render
-  //-----------------------------------------------------------------------------------------------
-  render() {
+    const props = this.props;  
+    const appCallBack = props.appCallBack;
     const newSticky = {
       backgroundColor: 'lightblue',
       height: 300,
@@ -28,7 +24,17 @@ class Composer extends Component {
       text: 'Just keep coding :)',
       x: 70,
       y: 70,
-  };
+    };
+    console.log("button clicked");
+    appCallBack(newSticky);
+  }
+
+
+  //-----------------------------------------------------------------------------------------------
+  // render
+  //-----------------------------------------------------------------------------------------------
+  render() {
+
 
   return (
       <div className="Composer">

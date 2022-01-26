@@ -8,14 +8,15 @@ class Canvas extends Component {
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
+    this.key = 1;
   }
   //-----------------------------------------------------------------------------------------------
   // renderSticky
   //-----------------------------------------------------------------------------------------------
   renderSticky(sticky) {
-      const key = JSON.stringify(sticky);
+    this.key++;
       return(
-          <Sticky sticky={sticky} key={key}/>
+          <Sticky sticky={sticky} key={this.key}/>
       );
   }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import stickies from './Stickies';
 import Canvas from './Canvas';
 import Composer from './Composer';
+import autoBind from 'auto-bind';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
+    autoBind(this);
 
     const stickies = [];
     
@@ -46,10 +48,19 @@ class App extends Component {
   }
 
   //-----------------------------------------------------------------------------------------------
-  // composer callBack
+  //  appCallBack
   //-----------------------------------------------------------------------------------------------
-  composerCallBack() {
+  appCallBack(newSticky) {
     console.log("composerCallBack");
+    const state = this.state;
+    // const stickies = JSON.parse(JSON.stringify(state.stickies));
+    const stickies = state.stickies;
+
+
+    stickies.push(newSticky);
+    this.setState({
+      stickies, 
+    });
   }
 
 
@@ -62,7 +73,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Composer appCallBack={this.composerCallBack}/>
+        <Composer appCallBack={this.appCallBack}/>
         <Canvas stickies={stickies}/>
       </div>
     );
