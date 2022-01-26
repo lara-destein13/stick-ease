@@ -40,9 +40,9 @@ class App extends Component {
   }
 
   //-----------------------------------------------------------------------------------------------
-  //  appCallBack
+  //  createStickyCallBack
   //-----------------------------------------------------------------------------------------------
-  appCallBack(newSticky) {
+  createStickyCallBack(newSticky) {
     newSticky.x = this.x;
     this.x += 50;
     if (this.x > 300) {
@@ -57,7 +57,6 @@ class App extends Component {
     const state = this.state;
     // const stickies = JSON.parse(JSON.stringify(state.stickies));
     const stickies = state.stickies;
-
 
     stickies.push(newSticky);
     // store stickies array is localStorage. We first convert the array to a string using 
@@ -78,7 +77,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Composer appCallBack={this.appCallBack}/>
+        <Composer createStickyCallBack={this.createStickyCallBack}/>
         <Canvas stickies={stickies}/>
       </div>
     );

@@ -17,7 +17,7 @@ class Composer extends Component {
   //-----------------------------------------------------------------------------------------------
   buttonClicked() {
     const props = this.props;  
-    const appCallBack = props.appCallBack;
+    const createStickyCallBack = props.createStickyCallBack;
     const newSticky = {
       backgroundColor: 'lightblue',
       height: 300,
@@ -29,7 +29,7 @@ class Composer extends Component {
 
 
     console.log("button clicked");
-    appCallBack(newSticky);
+    createStickyCallBack(newSticky);
   }
 
 
