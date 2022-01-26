@@ -23,7 +23,7 @@ class Sticky extends Component {
 
     sticky.x = position.x;
     sticky.y = position.y;
-    modifyStickyCallBack(sticky);  
+    modifyStickyCallBack();  
   }
 
   //-----------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ class Sticky extends Component {
     height = parseInt(height);
     sticky.height = height;
     sticky.width = width;
-    modifyStickyCallBack(sticky);
+    modifyStickyCallBack();
   }
 
   //-----------------------------------------------------------------------------------------------

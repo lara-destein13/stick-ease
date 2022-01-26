@@ -69,26 +69,11 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   //  modifyStickyCallBack
   //-----------------------------------------------------------------------------------------------
-  modifyStickyCallBack(modifiedSticky) {
-    console.log(JSON.stringify(modifiedSticky));
-    // const state = this.state;
-    // const stickies = state.stickies;
-    // const keepers = [];
-    // for (let i = 0; i < stickies.length; i++) {
-    //   const sticky = stickies[i];
-    //   if (sticky.id != modifiedSticky.id) {
-    //     keepers.push(sticky);
-    //   }
-    //   keepers.push(modifiedSticky);
-    // }
-    // this.setState({
-    //   state: keepers,
-    // }); 
-    // console.log(modifiedSticky.x);
-    // console.log(modifiedSticky.y);
-    // console.log(modifiedSticky.height);
-    // console.log(modifiedSticky.width);
-    // this.forceUpdate();
+  modifyStickyCallBack() {
+    const state = this.state;
+    const stickies = state.stickies;
+    console.log(JSON.stringify(stickies));
+    localStorage.setItem("stickies", JSON.stringify(stickies));
   }
 
   //-----------------------------------------------------------------------------------------------
