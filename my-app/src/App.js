@@ -70,6 +70,7 @@ class App extends Component {
   //  modifyStickyCallBack
   //-----------------------------------------------------------------------------------------------
   modifyStickyCallBack(modifiedSticky) {
+    console.log(JSON.stringify(modifiedSticky));
     // const state = this.state;
     // const stickies = state.stickies;
     // const keepers = [];

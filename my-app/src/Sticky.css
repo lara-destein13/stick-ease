@@ -1,9 +1,11 @@
 .Sticky {
-    display: flex;
-    flex-direction: column;
+    background-color: yellow;
+    border: solid 2px gold;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
 }
 
 .stick {
-    background-color: yellow;
-    height: 250px;
+
 }

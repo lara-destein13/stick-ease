@@ -20,13 +20,12 @@ class Sticky extends Component {
     const props = this.props;
     const sticky = props.sticky;
     const modifyStickyCallBack = props.modifyStickyCallBack;
+
     sticky.x = position.x;
     sticky.y = position.y;
-    modifyStickyCallBack(sticky);
-    console.log(`x: ${sticky.x}`);
-    console.log(`y: ${sticky.y}`);
-    
+    modifyStickyCallBack(sticky);  
   }
+
   //-----------------------------------------------------------------------------------------------
   // onResizeStop
   //-----------------------------------------------------------------------------------------------
@@ -34,23 +33,17 @@ class Sticky extends Component {
     const props = this.props;
     const sticky = props.sticky;
     const modifyStickyCallBack = props.modifyStickyCallBack;
+
     let width = ref.style.width;
     width = width.replace('px', "");
     width = parseInt(width);
     let height = ref.style.height;
     height = height.replace('px', "");
     height = parseInt(height);
-
-    // const width = ref.style.width;
-    // const width = parseInt()
-    // const height = ref.style.height;
     sticky.height = height;
     sticky.width = width;
     modifyStickyCallBack(sticky);
-    console.log(`height: ${height}`);
-    console.log(`width: ${width}`);
   }
-
 
   //-----------------------------------------------------------------------------------------------
   // render
@@ -71,7 +64,7 @@ class Sticky extends Component {
         onDragStop={this.onDragStop}
         onResizeStop={this.onResizeStop}       
         >            
-            <div className="stick">
+            <div className="Sticky">
             {sticky.text},
             </div>
         </Rnd>
