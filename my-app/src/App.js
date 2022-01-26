@@ -55,7 +55,6 @@ class App extends Component {
     }
     console.log("composerCallBack");
     const state = this.state;
-    // const stickies = JSON.parse(JSON.stringify(state.stickies));
     const stickies = state.stickies;
 
     stickies.push(newSticky);
@@ -70,12 +69,25 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   //  modifyStickyCallBack
   //-----------------------------------------------------------------------------------------------
-  modifyStickyCallBack() {
-    console.log("hello");
-    const state = this.state;
-    const stickies = state.stickies;
-    localStorage.setItem("stickies", JSON.stringify(stickies));
-    this.forceUpdate()
+  modifyStickyCallBack(modifiedSticky) {
+    // const state = this.state;
+    // const stickies = state.stickies;
+    // const keepers = [];
+    // for (let i = 0; i < stickies.length; i++) {
+    //   const sticky = stickies[i];
+    //   if (sticky.id != modifiedSticky.id) {
+    //     keepers.push(sticky);
+    //   }
+    //   keepers.push(modifiedSticky);
+    // }
+    // this.setState({
+    //   state: keepers,
+    // }); 
+    // console.log(modifiedSticky.x);
+    // console.log(modifiedSticky.y);
+    // console.log(modifiedSticky.height);
+    // console.log(modifiedSticky.width);
+    // this.forceUpdate();
   }
 
   //-----------------------------------------------------------------------------------------------

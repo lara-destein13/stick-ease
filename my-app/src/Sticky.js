@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Rnd } from 'react-rnd';
 import './Sticky.css';
+import autoBind from 'auto-bind'; 
 
 class Sticky extends Component {
   //-----------------------------------------------------------------------------------------------
@@ -8,25 +9,46 @@ class Sticky extends Component {
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
+    autoBind(this);
   }
 
   //-----------------------------------------------------------------------------------------------
   // onDragStop
   //-----------------------------------------------------------------------------------------------
-  onDragStop(x,y) {
-    console.log("onDragStop");
-    console.log(x);
-    console.log(y);
+  
+  onDragStop(e,position) {
+    const props = this.props;
+    const sticky = props.sticky;
+    const modifyStickyCallBack = props.modifyStickyCallBack;
+    sticky.x = position.x;
+    sticky.y = position.y;
+    modifyStickyCallBack(sticky);
+    console.log(`x: ${sticky.x}`);
+    console.log(`y: ${sticky.y}`);
+    
   }
   //-----------------------------------------------------------------------------------------------
   // onResizeStop
   //-----------------------------------------------------------------------------------------------
   onResizeStop(e, direction, ref, delta, position) {
-    console.log("onResizeStop");
-    const width = ref.style.width;
-    const height = ref.style.height;
-    console.log(width);
-    console.log(height);
+    const props = this.props;
+    const sticky = props.sticky;
+    const modifyStickyCallBack = props.modifyStickyCallBack;
+    let width = ref.style.width;
+    width = width.replace('px', "");
+    width = parseInt(width);
+    let height = ref.style.height;
+    height = height.replace('px', "");
+    height = parseInt(height);
+
+    // const width = ref.style.width;
+    // const width = parseInt()
+    // const height = ref.style.height;
+    sticky.height = height;
+    sticky.width = width;
+    modifyStickyCallBack(sticky);
+    console.log(`height: ${height}`);
+    console.log(`width: ${width}`);
   }
 
 

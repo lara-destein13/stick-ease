@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Sticky from './Sticky';
 import './Canvas.css';
+import autoBind from 'auto-bind'; 
 
 class Canvas extends Component {
   //-----------------------------------------------------------------------------------------------
@@ -8,8 +9,8 @@ class Canvas extends Component {
   //-----------------------------------------------------------------------------------------------
   constructor(props) {
     super(props);
+    autoBind(this);
     this.key = 1;
-    this.props.modifyStickyCallBack();
   }
   //-----------------------------------------------------------------------------------------------
   // renderSticky

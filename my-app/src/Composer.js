@@ -21,6 +21,7 @@ class Composer extends Component {
     const newSticky = {
       backgroundColor: 'lightblue',
       height: 300,
+      id: Date.now(),
       width: 300,
       text: this.text,
       x: 70,
