@@ -53,7 +53,7 @@ class Composer extends Component {
           <header className="header">
               <h1 className="h1">Stick Ease</h1>
           </header>
-          <textarea className="textarea" id="textarea" onChange={this.textAreaChanged}></textarea>
+          <textarea className="textarea" id="textarea" onChange={this.textAreaChanged} placeholder='type anything here...'></textarea>
           <button className="button" onClick={this.buttonClicked}>create note</button>
       </div>
 

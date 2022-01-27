@@ -24,7 +24,7 @@ class App extends Component {
     this.y = 50;
 
     // go into localStorage, get stickies as a string, if the string exists use 
-    // JSON.parse to convert it into a sting of objects called stickies. Otherwise
+    // JSON.parse to convert it into a string of objects called stickies. Otherwise
     // initialize stickies to an empty array. 
     let stickies = localStorage.getItem('stickies')
     if (stickies) {

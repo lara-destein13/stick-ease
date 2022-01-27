@@ -65,7 +65,7 @@ class Sticky extends Component {
         onResizeStop={this.onResizeStop}       
         >            
             <div className="Sticky">
-            {sticky.text},
+            {sticky.text}
             </div>
         </Rnd>
     );
