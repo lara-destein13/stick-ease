@@ -24,7 +24,7 @@ class App extends Component {
     this.y = 50;
 
     // go into localStorage, get stickies as a string, if the string exists use 
-    // JSON.parse to convert it into a string of objects called stickies. Otherwise
+    // JSON.parse to convert it into a array of objects called stickies. Otherwise
     // initialize stickies to an empty array. 
     let stickies = localStorage.getItem('stickies')
     if (stickies) {
@@ -34,6 +34,7 @@ class App extends Component {
     }
 
     // state is a set of variables that are used in the render function. 
+    // the only thing we have in our state is the array of stickies.
     this.state = {
       stickies: stickies,
     };
@@ -42,6 +43,12 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   //  createStickyCallBack
   //-----------------------------------------------------------------------------------------------
+  // CallBack function that tells the app when a new sticky is being 
+  // created. Function takes newSticky as an argument and pushes a
+  // newSticky onto our "stickies" array. The new sticky's 
+  // initial size and position are set. The new sticky
+  // is stored in localStorage by converting the array of objects 
+  // to a string using JSON.stringify. The function is called from the Composer.
   createStickyCallBack(newSticky) {
     newSticky.x = this.x;
     this.x += 50;
@@ -58,8 +65,6 @@ class App extends Component {
     const stickies = state.stickies;
 
     stickies.push(newSticky);
-    // store stickies array is localStorage. We first convert the array to a string using 
-    // JSON.stringify. 
     localStorage.setItem("stickies", JSON.stringify(stickies));
     this.setState({
       stickies, 
@@ -69,6 +74,10 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   //  modifyStickyCallBack
   //-----------------------------------------------------------------------------------------------
+  // CallBack function that recognizes changes made to a sticky in the 
+  // stickies array and saves those changes in localStorage by converting 
+  // the array of objects to a string using JSON.stringify. This function is called
+  // from the Sticky component.
   modifyStickyCallBack() {
     const state = this.state;
     const stickies = state.stickies;
@@ -79,6 +88,10 @@ class App extends Component {
   //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
+  // A function called by react. It returns markup to be rendered by react. In this case
+  // it returns two components: the Composer and the Canvas. The props on the compoenent 
+  // tags are passed to the constructor of the corresponding class instance.
+
   render() {
     const state = this.state;
     const stickies = state.stickies;
