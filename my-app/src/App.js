@@ -1,10 +1,11 @@
 // App.js is the top most class component that pulls in and
 // renders our front-end layout. It pulls in our canvas and
 // composer components defined in separate files. 
+import autoBind from 'auto-bind'; 
 import React, { Component } from 'react';
 import Canvas from './Canvas';
 import Composer from './Composer';
-import autoBind from 'auto-bind'; 
+import Signup from './SignUp';
 import './App.css';
 
 
@@ -36,6 +37,7 @@ class App extends Component {
     // state is a set of variables that are used in the render function. 
     // the only thing we have in our state is the array of stickies.
     this.state = {
+      loggedIn: false,
       stickies: stickies,
     };
   }
@@ -95,14 +97,23 @@ class App extends Component {
   render() {
     const state = this.state;
     const stickies = state.stickies;
+    const loggedIn = state.loggedIn;
 
-    return (
-      <div className="App">
-        <Composer createStickyCallBack={this.createStickyCallBack}/>
-        <Canvas stickies={stickies} modifyStickyCallBack={this.modifyStickyCallBack}/>
-      </div>
-    );
-  };
+    if (loggedIn) {
+      return (
+        <div className="App">
+          <Composer createStickyCallBack={this.createStickyCallBack}/>
+          <Canvas stickies={stickies} modifyStickyCallBack={this.modifyStickyCallBack}/>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+            <Signup></Signup>
+        </div>
+      );    
+    }
+  }  
 }
 
 export default App;
