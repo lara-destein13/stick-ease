@@ -106,7 +106,8 @@ class App extends Component {
         </div>
       );
     } else {
-      return (        
+      return ( 
+      <div className="center">     
         <div className="App">
           <h2 className="signin">Sign in to Stick-Ease</h2>
             <form className="form">
@@ -117,6 +118,7 @@ class App extends Component {
               <button type="submit" className="submit">Sign In</button>
             </form>
         </div>
+      </div>      
       );    
     }
   }  
