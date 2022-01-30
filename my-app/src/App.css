@@ -1,5 +1,55 @@
 .App {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  border: solid 2px gold;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
+
+.signin {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit  {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  background: none;
+  color: inherit;
+  border: solid 1px black;
+  width: 280px;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.email-input {
+  background: none;
+  color: inherit;
+  border: solid 1px black;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.password-input {
+  background: none;
+  color: inherit;
+  border: solid 1px black;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+
 

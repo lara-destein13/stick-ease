@@ -5,7 +5,6 @@ import autoBind from 'auto-bind';
 import React, { Component } from 'react';
 import Canvas from './Canvas';
 import Composer from './Composer';
-import Signup from './SignUp';
 import './App.css';
 
 
@@ -107,9 +106,16 @@ class App extends Component {
         </div>
       );
     } else {
-      return (
+      return (        
         <div className="App">
-            <Signup></Signup>
+          <h2 className="signin">Sign in to Stick-Ease</h2>
+            <form className="form">
+              <label for="email" className="email-label">Email Address:</label>
+              <input type="email" placeholder="Email Address" className="email-input" />
+              <label for="password" className="password-label">Password:</label>
+              <input type="password" placeholder="Password" className="password-input" />
+              <button type="submit" className="submit">Sign In</button>
+            </form>
         </div>
       );    
     }
