@@ -14,6 +14,12 @@
 
 .App .login table {
   background-color: yellow;
+  border: solid gold;
+  font-size: 1.5em;
+}
+
+.App .login table td {
+  padding: 10px;
 }
 
 .App .login .login-form .text-input {
