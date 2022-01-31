@@ -3,3 +3,17 @@
   flex-direction: row;
 }
 
+.App .login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App .login-form {
+  margin-top: 200px;
+  height: 500px;
+  width: 500px;
+  background-color: yellow;
+}

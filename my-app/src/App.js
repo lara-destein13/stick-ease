@@ -118,9 +118,11 @@ class App extends Component {
       return (
         <div className="App">
           <div className="login">
-            <form onSubmit={this.submit}>
-              <button type="submit">Submit</button>
-            </form>
+            <div className="login-form">
+              <form onSubmit={this.submit}>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
           </div>  
         </div>
       );
