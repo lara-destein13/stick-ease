@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/stick-ease/static/css/main.b42cab9f.css",
-    "main.js": "/stick-ease/static/js/main.8c5f0048.js",
+    "main.css": "/stick-ease/static/css/main.4505bd10.css",
+    "main.js": "/stick-ease/static/js/main.2d768aea.js",
     "static/js/787.28cb0dcd.chunk.js": "/stick-ease/static/js/787.28cb0dcd.chunk.js",
     "static/media/cork-board-image-use.png": "/stick-ease/static/media/cork-board-image-use.a5007c4561b33a98f0fa.png",
     "index.html": "/stick-ease/index.html",
-    "main.b42cab9f.css.map": "/stick-ease/static/css/main.b42cab9f.css.map",
-    "main.8c5f0048.js.map": "/stick-ease/static/js/main.8c5f0048.js.map",
+    "main.4505bd10.css.map": "/stick-ease/static/css/main.4505bd10.css.map",
+    "main.2d768aea.js.map": "/stick-ease/static/js/main.2d768aea.js.map",
     "787.28cb0dcd.chunk.js.map": "/stick-ease/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b42cab9f.css",
-    "static/js/main.8c5f0048.js"
+    "static/css/main.4505bd10.css",
+    "static/js/main.2d768aea.js"
   ]
 }
