@@ -1,14 +1,13 @@
 .App {
   display: flex;
   flex-direction: row;
+  height: 2000px;
+  flex-grow: 1;
+  background-image: url(./cork-board-image-use.png);
 }
 
 .App .login {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding-top: 200px;
 }
 
@@ -16,6 +15,7 @@
   background-color: yellow;
   border: solid gold;
   font-size: 1.5em;
+  margin-left: calc(50% - 200px);
 }
 
 .App .login table td {
@@ -26,4 +26,3 @@
   text-align: center;
   margin-top: 20px;
 }
-
