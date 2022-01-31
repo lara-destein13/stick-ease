@@ -114,39 +114,57 @@ class App extends Component {
       );
     };
 
+    const renderTable = () => {
+      return (
+        <table>          
+          <tbody>
+            <tr>
+              <td>Email Address:</td>
+              <td>  
+                <label className="email-label">
+                  <input type="email" placeholder="Email Address" className="email-input" />
+                </label>  
+              </td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td>               
+                <label className="password-label">
+                  <input type="password" placeholder="Password" className="password-input" />
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button type="submit" className="submit">Sign In</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      )
+    }
+
+
     const renderLoginForm = () => {
       return (
         <div className="App">
-          <div className="login"> 
-            <form onSubmit={this.submit}> 
-              <table>
-                <tbody>
-                  <tr>
-                    <td>Email Address:</td>
-                    <td>  
-                      <label className="email-label">
-                        <input type="email" placeholder="Email Address" className="email-input" />
-                      </label>  
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Password:</td>
-                    <td>               
-                      <label className="password-label">
-                        <input type="password" placeholder="Password" className="password-input" />
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <button type="submit" className="submit">Sign In</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </form>
-          </div>
+          <div className="login">
+            <div className="table-wrapper"> 
+              <h1 className="stick-ease-h1">Stick Ease</h1>     
+              <form onSubmit={this.submit}>
+                { renderTable()}    
+              </form>
+              <div className="signature-line-wrapper">
+                <div className="signature-line">
+                  <span>made with ♥ by</span>   
+                </div>
+                <div className="signature-line">
+                  <span>&copy; 2022 Lara DeStein</span>   
+                </div>
+              </div>  
+            </div>
+          </div>  
         </div>    
       );
     };
@@ -171,28 +189,3 @@ export default App;
 
 
 
-
-// old render login
-// const renderLoginForm = () => {
-//   return (
-//     <div className="App">
-//       <div className="login">
-//         <div className="login-form">
-//           <form onSubmit={this.submit}>
-//             <div className="text-input">
-//               <label className="email-label">Email Address: 
-//                 <input type="email" placeholder="Email Address" className="email-input" />
-//               </label>  
-//             </div>
-//             <div className="text-input">  
-//               <label className="password-label">Password:
-//                 <input type="password" placeholder="Password" className="password-input" />
-//               </label>
-//             </div>  
-//             <button type="submit">Submit</button>
-//           </form>
-//         </div>
-//       </div>  
-//     </div>
-//   );
-// };
