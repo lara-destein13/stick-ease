@@ -118,7 +118,7 @@ class App extends Component {
       return (
         <div className="App">
           <div className="login">
-            <form>
+            <form onSubmit={this.submit}>
               <table>
                 <tbody>
                   <tr>
@@ -139,7 +139,9 @@ class App extends Component {
                   </tr>
                   <tr>
                     <td></td>
-                    <td>Submit Button</td>
+                    <td>
+                      <button type="submit" className="submit">Sign In</button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
