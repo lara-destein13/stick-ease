@@ -16,13 +16,49 @@
   border: solid gold;
   font-size: 1.5em;
   margin-left: calc(50% - 200px);
+  padding: 80px 10px;
 }
 
 .App .login table td {
   padding: 10px;
 }
 
+.App .login .sign-in-header {
+  text-align: center;
+  
+}
+
 .App .login .login-form .text-input {
   text-align: center;
   margin-top: 20px;
+}
+
+.App .login .submit {
+    background: none;
+    font-size: 20px;
+    color: inherit;
+    border: solid 1px black;
+    width: 270px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.App .login .email-input {
+  background: none;
+  font-size: 20px;
+  color: inherit;
+  border: solid 1px black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.App .login .password-input {
+  background: none;
+  font-size: 20px;
+  color: inherit;
+  border: solid 1px black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 12px;
 }

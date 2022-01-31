@@ -117,8 +117,8 @@ class App extends Component {
     const renderLoginForm = () => {
       return (
         <div className="App">
-          <div className="login">
-            <form onSubmit={this.submit}>
+          <div className="login"> 
+            <form onSubmit={this.submit}> 
               <table>
                 <tbody>
                   <tr>
