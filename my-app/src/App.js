@@ -36,7 +36,7 @@ class App extends Component {
     // state is a set of variables that are used in the render function. 
     // the only thing we have in our state is the array of stickies.
     this.state = {
-      loggedIn: false,
+      email: null,
       stickies: stickies,
     };
   }
@@ -92,6 +92,9 @@ class App extends Component {
   submit(event) {
     event.preventDefault();
     console.log("submit");
+    this.setState({
+      email: "laradestein@gmail.com",
+    })
   };
 
   //-----------------------------------------------------------------------------------------------
@@ -104,9 +107,9 @@ class App extends Component {
   render() {
     const state = this.state;
     const stickies = state.stickies;
-    const loggedIn = state.loggedIn;
+    const email = state.email;
 
-    if (loggedIn) {
+    if (email) {
       return (
         <div className="App">
           <Composer createStickyCallBack={this.createStickyCallBack}/>
@@ -115,25 +118,32 @@ class App extends Component {
       );
     } else {
       return ( 
-      <div className="center">     
-        <div className="App">
-          <h2 className="signin">Sign in to Stick-Ease</h2>
-            <form className="form" onSubmit={this.submit}>
-              <label className="email-label">Email Address: 
-              <input type="email" placeholder="Email Address" className="email-input" />
-              </label>  
-              <label className="password-label">Password:
-              <input type="password" placeholder="Password" className="password-input" />
-              </label>
-              <button type="submit" className="submit">Sign In</button>
-            </form>
-        </div>
-      </div>      
+        <div className="center">     
+          <div className="App">
+            <h2 className="signin">Sign in to Stick-Ease</h2>
+              <form className="form" onSubmit={this.submit}>
+                <label className="email-label">Email Address: 
+                <input type="email" placeholder="Email Address" className="email-input" />
+                </label>  
+                <label className="password-label">Password:
+                <input type="password" placeholder="Password" className="password-input" />
+                </label>
+                <button type="submit" className="submit">Sign In</button>
+              </form>
+          </div>
+        </div>      
       );    
     }
   }  
 }
 
 export default App;
+
+
+
+
+
+
+
 
 
