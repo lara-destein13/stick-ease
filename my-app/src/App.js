@@ -118,13 +118,34 @@ class App extends Component {
       return (
         <div className="App">
           <div className="login">
-            <div className="login-form">
-              <form onSubmit={this.submit}>
-                <button type="submit">Submit</button>
-              </form>
-            </div>
-          </div>  
-        </div>
+            <form>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Email Address:</td>
+                    <td>  
+                      <label className="email-label">
+                        <input type="email" placeholder="Email Address" className="email-input" />
+                      </label>  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Password:</td>
+                    <td>               
+                      <label className="password-label">
+                        <input type="password" placeholder="Password" className="password-input" />
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Submit Button</td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+        </div>    
       );
     };
 
@@ -145,3 +166,31 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+
+// old render login
+// const renderLoginForm = () => {
+//   return (
+//     <div className="App">
+//       <div className="login">
+//         <div className="login-form">
+//           <form onSubmit={this.submit}>
+//             <div className="text-input">
+//               <label className="email-label">Email Address: 
+//                 <input type="email" placeholder="Email Address" className="email-input" />
+//               </label>  
+//             </div>
+//             <div className="text-input">  
+//               <label className="password-label">Password:
+//                 <input type="password" placeholder="Password" className="password-input" />
+//               </label>
+//             </div>  
+//             <button type="submit">Submit</button>
+//           </form>
+//         </div>
+//       </div>  
+//     </div>
+//   );
+// };

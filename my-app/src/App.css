@@ -9,11 +9,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 200px;
 }
 
-.App .login-form {
-  margin-top: 200px;
-  height: 500px;
-  width: 500px;
+.App .login table {
   background-color: yellow;
+}
+
+.App .login .login-form .text-input {
+  text-align: center;
+  margin-top: 20px;
 }
