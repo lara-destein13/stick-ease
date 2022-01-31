@@ -107,7 +107,7 @@ class App extends Component {
 
     const renderMain = () => {
       return (
-        <div className="main">
+        <div className="App">
           <Composer createStickyCallBack={this.createStickyCallBack}/>
           <Canvas stickies={stickies} modifyStickyCallBack={this.modifyStickyCallBack}/>
         </div>
@@ -116,10 +116,12 @@ class App extends Component {
 
     const renderLoginForm = () => {
       return (
-        <div className="login">
-          <form onSubmit={this.submit}>
-            <button type="submit">Submit</button>
-          </form>
+        <div className="App">
+          <div className="login">
+            <form onSubmit={this.submit}>
+              <button type="submit">Submit</button>
+            </form>
+          </div>  
         </div>
       );
     };
@@ -133,7 +135,7 @@ class App extends Component {
     };
  
     return (
-      <div className="App">
+      <div>
         { renderContent() }
       </div>
     );
