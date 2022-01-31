@@ -86,6 +86,14 @@ class App extends Component {
     localStorage.setItem("stickies", JSON.stringify(stickies));
   }
 
+//-----------------------------------------------------------------------------------------------
+//  submit
+//-----------------------------------------------------------------------------------------------
+  submit(event) {
+    event.preventDefault();
+    console.log("submit");
+  };
+
   //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
@@ -110,11 +118,13 @@ class App extends Component {
       <div className="center">     
         <div className="App">
           <h2 className="signin">Sign in to Stick-Ease</h2>
-            <form className="form">
-              <label for="email" className="email-label">Email Address:</label>
+            <form className="form" onSubmit={this.submit}>
+              <label className="email-label">Email Address: 
               <input type="email" placeholder="Email Address" className="email-input" />
-              <label for="password" className="password-label">Password:</label>
+              </label>  
+              <label className="password-label">Password:
               <input type="password" placeholder="Password" className="password-input" />
+              </label>
               <button type="submit" className="submit">Sign In</button>
             </form>
         </div>
