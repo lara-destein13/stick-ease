@@ -36,6 +36,7 @@ class App extends Component {
     // state is a set of variables that are used in the render function. 
     // the only thing we have in our state is the array of stickies.
     this.state = {
+      email: null,
       stickies: stickies,
     };
   }
@@ -86,6 +87,13 @@ class App extends Component {
   }
 
   //-----------------------------------------------------------------------------------------------
+  // submit
+  //-----------------------------------------------------------------------------------------------
+  submit(event) {
+    event.preventDefault();
+    this.setState({ email: 'lara' });
+  }
+  //-----------------------------------------------------------------------------------------------
   // render
   //-----------------------------------------------------------------------------------------------
   // A function called by react. It returns markup to be rendered by react. In this case
@@ -95,11 +103,38 @@ class App extends Component {
   render() {
     const state = this.state;
     const stickies = state.stickies;
+    const email = state.email;
 
+    const renderMain = () => {
+      return (
+        <div className="main">
+          <Composer createStickyCallBack={this.createStickyCallBack}/>
+          <Canvas stickies={stickies} modifyStickyCallBack={this.modifyStickyCallBack}/>
+        </div>
+      );
+    };
+
+    const renderLoginForm = () => {
+      return (
+        <div className="login">
+          <form onSubmit={this.submit}>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      );
+    };
+
+    const renderContent = () => {
+      if (email === null) {
+        return renderLoginForm();
+      } else {
+        return renderMain();
+      }
+    };
+ 
     return (
       <div className="App">
-        <Composer createStickyCallBack={this.createStickyCallBack}/>
-        <Canvas stickies={stickies} modifyStickyCallBack={this.modifyStickyCallBack}/>
+        { renderContent() }
       </div>
     );
   };
